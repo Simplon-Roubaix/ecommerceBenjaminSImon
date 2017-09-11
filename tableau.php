@@ -1,6 +1,7 @@
 <?php
 $tableau = array (
   'title' => 'Bienvenue sur notre site E-Commerce',
+  'description'=>'Site de vente pc E-gamer',
   'copyright' => '©Benjamin & Simon',
   'year' => '2017',
 );

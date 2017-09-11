@@ -1,7 +1,7 @@
         <?php include("header.php"); ?>
 
         <div class="container">
-          <div class="row">
+          <div class="row d-flex justify-content-between">
 
             <?php
 
@@ -16,7 +16,7 @@
 
                     <input type="hidden" value="<?php echo $key; ?>" name="indice" />
 
-                    <input type="submit" class="btn btn-primary"></input>
+                    <input type="submit" class="btn btn-primary" value="Voir plus"></input>
                   </div>
                 </div>
               </form>

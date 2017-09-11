@@ -1,4 +1,4 @@
-<footer>
+<footer class="jumbotron m-0">
     <p>
         <?php
     echo $tableau['copyright'];

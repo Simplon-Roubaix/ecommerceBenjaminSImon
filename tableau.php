@@ -8,7 +8,7 @@ $tableau = array (
 
 $tabarticle = array (
   array(
-    'img'=>'1.jpg',
+    'img'=>'1.png',
     'title'=>'Omnislash [ PC Gamer ]',
     'para1'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet lacus ornare, mollis nunc eu, malesuada est. Phasellus at leo id eros gravida commodo. Phasellus eget condimentum metus, vitae pretium nulla. Cras iaculis, nibh nec auctor laoreet, turpis sapien varius neque, ac fringilla quam sem vel ex. Sed tempus eleifend urna, at malesuada velit faucibus sed. Nulla tempus bibendum leo, eu porttitor libero commodo ac. In sapien massa, convallis eu lectus sit amet, feugiat tempus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mattis id dolor vel ornare. Etiam blandit tortor eget mattis tincidunt. Maecenas egestas ligula massa, ut ullamcorper mi vehicula vitae. ',
     'para2'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet lacus ornare, mollis nunc eu, malesuada est. Phasellus at leo id eros gravida commodo. Phasellus eget condimentum metus, vitae pretium nulla. Cras iaculis, nibh nec auctor laoreet, turpis sapien varius neque, ac fringilla quam sem vel ex. Sed tempus eleifend urna, at malesuada velit faucibus sed. Nulla tempus bibendum leo, eu porttitor libero commodo ac. In sapien massa, convallis eu lectus sit amet, feugiat tempus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mattis id dolor vel ornare. Etiam blandit tortor eget mattis tincidunt. Maecenas egestas ligula massa, ut ullamcorper mi vehicula vitae. '

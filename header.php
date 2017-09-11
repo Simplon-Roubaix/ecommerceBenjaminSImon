@@ -26,4 +26,8 @@
 </head>
 
 <body>
- <header class="jumbotron"><h1 class="text-center"> <?php echo $tableau['title']; ?></h1> </header>
+ <header class="jumbotron">
+   <h1 class="text-center"> <?php echo $tableau['title']; ?></h1>
+   <p class="text-center mx-2"><?php echo $tableau['description']; ?></p>
+
+ </header>

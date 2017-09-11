@@ -7,7 +7,7 @@
 
       foreach ($tabarticle as $key => $value) {
           ?>
-              <form class="row" action="reception.php" method="post">
+              <form class="my-2" action="reception.php" method="post">
                 <div class="card" style="width: 20rem">
                   <img class="card-img-top" src="img/<?php echo $value['img']; ?>" alt="Card image cap">
                   <div class="card-block">

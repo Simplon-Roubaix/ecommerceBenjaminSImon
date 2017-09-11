@@ -1,9 +1,9 @@
 <p>  <?php
-    echo $footer[0];
+    echo $tableau['copyright'];
    ?>
 </p>
 <p>
   <?php
-    echo $footer[1];
+    echo $tableau['year'];
    ?>
 </p>

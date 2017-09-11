@@ -1,2 +1,2 @@
 <?php include("tableau.php") ?>
- <h1 class="title"> <?php echo $header; ?></h1>
+ <h1 class="title"> <?php echo $tableau['title']; ?></h1>

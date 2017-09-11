@@ -1,5 +1,7 @@
 <?php
-$header = "Bienvenue sur notre site E-Commerce"; //Titre
-$footer[0] = "©Benjamin & Simon"; //Copyright
-$footer[1] = "2017"; //année
+$tableau = array (
+  'title' => 'Bienvenue sur notre site E-Commerce',
+  'copyright' => '©Benjamin & Simon',
+  'year' => '2017',
+);
  ?>

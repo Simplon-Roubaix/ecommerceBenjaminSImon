@@ -99,7 +99,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+a{
+  padding: 10px;
+  text-align: center;
+  background: blue;
+  color: white;
+  margin-top:10px;
+}
 
 
 /* ==========================================================================

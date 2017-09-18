@@ -14,7 +14,7 @@
                     <h4 class="card-title"><?php echo $donnees['titre']; ?></h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                    <input type="hidden" value="<?php echo $donnees['id']; ?>" name="indice" />
+                    <input type="hidden" value="<?php echo $donnees['id_article']; ?>" name="indice" />
 
                     <input type="submit" class="btn btn-primary" value="Voir plus"></input>
                   </div>

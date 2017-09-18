@@ -1,4 +1,7 @@
-<?php include("tableau.php") ?>
+<?php include("tableau.php");
+$infosite= $bdd->query('SELECT * from info');
+$infosite1= $infosite->fetch();
+?>
 <!doctype html>
 <html class="no-js" lang="fr">
 
@@ -27,7 +30,7 @@
 
 <body>
  <header class="jumbotron">
-   <h1 class="text-center"> <?php echo $tableau['title']; ?></h1>
-   <p class="text-center mx-2"><?php echo $tableau['description']; ?></p>
+   <h1 class="text-center"> <?php echo $infosite1['titre']; ?></h1>
+   <p class="text-center mx-2"><?php echo $infosite1['site_description']; ?></p>
 
  </header>

@@ -1,12 +1,12 @@
 <footer class="jumbotron m-0">
     <p>
         <?php
-    echo $tableau['copyright'];
+    echo $infosite1['copyright'];
    ?>
     </p>
     <p>
         <?php
-    echo $tableau['year'];
+    echo $infosite1['year'];
    ?>
     </p>
 </footer>

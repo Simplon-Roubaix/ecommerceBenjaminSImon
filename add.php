@@ -31,4 +31,4 @@ if (isset($_FILES['file']) and $_FILES['file']['error'] == 0 and !empty($_POST['
     }
 };
 
-// header("location:espace.php");
+header("location:espace.php");

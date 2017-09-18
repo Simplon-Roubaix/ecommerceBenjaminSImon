@@ -18,7 +18,7 @@
       <td><?php echo $donnees['descriptiondetail']; ?></td>
       <td><a href="update.php?id=<?php echo $donnees['id_article'];?>"><i class="fa fa-wrench" aria-hidden="true"></i></a></td>
       <td>
-        <form class="" action="espace.php" method="post">
+        <form class="" action="deletepost.php" method="post">
           <input type="hidden" name="id" value="<?php echo $donnees['id_article']; ?>">
           <button type="submit" name="button">X</button>
         </form>

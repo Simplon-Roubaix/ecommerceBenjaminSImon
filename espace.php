@@ -30,22 +30,26 @@
 </table>
 
 <h2>Ajouter un article</h2>
-<form enctype="multipart/form-data" method="post" action="formenvoie.php">
+<form enctype="multipart/form-data" method="post" action="add.php">
   <div class="form-group">
     <label for="exampleInputEmail1">titre</label>
-    <input type="titre" class="form-control" name="titre" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="titre">
+    <input type="titre" class="form-control" name="titre" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="titre" required>
   </div>
   <div class="form-group">
     <label for="exampleTextarea">description</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3" name="description"></textarea>
+    <textarea class="form-control" id="exampleTextarea" rows="3" name="description" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextare">description detail</label>
+    <textarea class="form-control" id="exampleTextare" rows="3" name="descriptiondetail" required></textarea>
   </div>
   <div class="form-group">
     <label for="exampleTextare">description image</label>
-    <textarea class="form-control" id="exampleTextare" rows="3" name="descriptionimg"></textarea>
+    <textarea class="form-control" id="exampleTextare" rows="3" name="descriptionimg" required></textarea>
   </div>
   <div class="form-group">
     <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" name="file" id="exampleInputFile" aria-describedby="fileHelp">
+    <input type="file" class="form-control-file" name="file" id="exampleInputFile" aria-describedby="fileHelp" required>
   </div>
   <input type="submit" class="btn btn-primary">
 </form>

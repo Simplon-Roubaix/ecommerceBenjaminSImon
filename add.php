@@ -11,17 +11,17 @@ if (isset($_FILES['file']) and $_FILES['file']['error'] == 0 and !empty($_POST['
         $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
         if (in_array($extension_upload, $extensions_autorisees)) {
             move_uploaded_file($tmp_name,"$uploads_dir/$nomfichier");
-            $reponse = $bdd->prepare('INSERT into image (nom,poids,type,alt) values(:nom,:size,:type,:alt)');
-            $reponse->execute(array(
+            $addimage = $bdd->prepare('INSERT into image (nom,poids,type,alt) values(:nom,:size,:type,:alt)');
+            $addimage->execute(array(
             'nom'=>$nomfichier,
             'size'=>$_FILES['file']['size'],
             'type'=>$extension_upload,
             'alt'=>htmlspecialchars($_POST['descriptionimg'])
           ));
-            $bonjour = $bdd->query('SELECT max(id_image) as max from image');
-            $lastid = $bonjour->fetch();
-            $reponse = $bdd->prepare('INSERT into article (img_id,titre,description,descriptiondetail) values(:id,:titre,:description,:descriptiondetail)');
-            $reponse->execute(array(
+            $imagelastid = $bdd->query('SELECT max(id_image) as max from image');
+            $lastid = $imagelastid->fetch();
+            $addarticle = $bdd->prepare('INSERT into article (img_id,titre,description,descriptiondetail) values(:id,:titre,:description,:descriptiondetail)');
+            $addarticle->execute(array(
             'id'=>$lastid["max"],
             'titre'=>htmlspecialchars($_POST['titre']),
             'description'=>htmlspecialchars($_POST['description']),

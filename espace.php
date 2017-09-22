@@ -9,8 +9,8 @@
     <th>delete</th>
   </tr>
   <?php
-  $reponse = $bdd->query('SELECT * FROM article');
-  while ($donnees = $reponse->fetch()){
+  $selectarticle = $bdd->query('SELECT * FROM article');
+  while ($donnees = $selectarticle->fetch()){
     ?>
     <tr>
       <td><?php echo $donnees['id_article']; ?></td>

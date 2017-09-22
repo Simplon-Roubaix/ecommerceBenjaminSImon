@@ -1,10 +1,10 @@
 <?php include("header.php");
 
-$reponse = $bdd->prepare('SELECT * from article where id_article = :indice');
-$reponse->execute(array(
+$selectarticle = $bdd->prepare('SELECT * from article where id_article = :indice');
+$selectarticle->execute(array(
   'indice'=>$_GET['id']
 ));
-$donnees = $reponse->fetch();
+$donnees = $selectarticle->fetch();
  ?>
  <form method="post" action="updatepost.php">
    <div class="form-group">

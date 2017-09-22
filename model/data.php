@@ -19,8 +19,8 @@ function get_article_img_id($id)
 
 function get_article_id($id)
 {
+  $bdd = new PDO('mysql:host=localhost;dbname=ecommerceBS;charset=utf8', 'root', 'root');
     $selectarticle = $bdd->prepare('SELECT * from article where id_article = :indice');
-    $bdd = new PDO('mysql:host=localhost;dbname=ecommerceBS;charset=utf8', 'root', 'root');
     $selectarticle->execute(array(
     'indice'=>$id
   ));
@@ -53,8 +53,16 @@ function get_info()
     return $infosite->fetch();
 };
 
-function add_image()
+function add_image($nomfichier,$size,$extension,$alt)
 {
+  $bdd = new PDO('mysql:host=localhost;dbname=ecommerceBS;charset=utf8', 'root', 'root');
+  $addimage = $bdd->prepare('INSERT into image (nom,poids,type,alt) values(:nom,:size,:type,:alt)');
+  $addimage->execute(array(
+  'nom'=>$nomfichier,
+  'size'=>$size,
+  'type'=>$extension,
+  'alt'=>$alt
+));
 };
 
 function add_article($titre, $description, $descriptiondetail)
@@ -69,4 +77,12 @@ function add_article($titre, $description, $descriptiondetail)
   'description'=>$description,
   'descriptiondetail'=>$descriptiondetail
 ));
+};
+
+function delete_article($id){
+  $bdd = new PDO('mysql:host=localhost;dbname=ecommerceBS;charset=utf8', 'root', 'root');
+  $reponse = $bdd->prepare('DELETE from article where id_article = :indice');
+  $reponse->execute(array(
+    'indice'=>$id
+  ));
 };

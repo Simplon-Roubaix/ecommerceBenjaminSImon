@@ -43,7 +43,7 @@ function get_article()
 {
     $bdd = new PDO('mysql:host=localhost;dbname=ecommerceBS;charset=utf8', 'root', 'root');
     $selectarticle = $bdd->query('SELECT * FROM article');
-    return $reponse->fetchAll();
+    return $selectarticle->fetchAll();
 };
 
 function get_info()

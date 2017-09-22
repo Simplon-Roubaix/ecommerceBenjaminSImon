@@ -1,6 +1,3 @@
-<?php
-include '../controle/header.php'
- ?>
 <div class="container my-5">
   <div class="row">
    <article class="col-md-3">
@@ -13,6 +10,3 @@ include '../controle/header.php'
    </article>
  </div>
 </div>
-<?php
-include '../controle/footer.php'
- ?>

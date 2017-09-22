@@ -28,5 +28,5 @@
  <header class="jumbotron">
    <h1 class="text-center"> <?php echo $infosite1['titre']; ?></h1>
    <p class="text-center mx-2"><?php echo $infosite1['site_description']; ?></p>
-
+   <a href="../controle/espace.php">espace</a>
  </header>

@@ -1,6 +1,3 @@
-<?php
-include '../controle/header.php'
- ?>
 <div class="container">
   <div class="row d-flex justify-content-between">
 
@@ -26,6 +23,3 @@ include '../controle/header.php'
 ?>
   </div>
 </div>
-<?php
-include '../controle/footer.php'
- ?>

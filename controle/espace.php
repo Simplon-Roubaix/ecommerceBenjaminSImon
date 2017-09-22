@@ -2,11 +2,14 @@
 include '../model/data.php';
 
 include 'header.php';
+// si on clique pas sur update
 if(!isset($_GET['updateid']))
 {
+  // si on clique sur delete
 if(isset($_GET['deleteid'])){
 delete_article($_GET['deleteid']);
 }
+// si on ajout un article
 if(isset($_POST['titre']) and isset($_POST['description']) and isset($_POST['descriptiondetail']) and isset($_POST['descriptionimg']) and isset($_FILES['file'])){
   if (isset($_FILES['file']) and $_FILES['file']['error'] == 0 and !empty($_POST['titre']) && !empty($_POST['description'])) {
       if ($_FILES['file']['size'] <= 1000000) {
@@ -24,12 +27,14 @@ if(isset($_POST['titre']) and isset($_POST['description']) and isset($_POST['des
 }
 };
 }
+// update article
 if(isset($_POST['idupdate'])){
 update_article($_POST['titre'], $_POST['description'], $_POST['descriptiondetail'], $_POST['idupdate']);
 }
 $value = get_article();
 include '../vue/espace.php';
 }
+// si on a cliqué sur update , envoie sur la page update
 else{
 $donnees = get_article_id($_GET['updateid']);
 include '../vue/update.php';

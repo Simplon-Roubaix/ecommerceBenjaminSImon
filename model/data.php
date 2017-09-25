@@ -34,9 +34,9 @@ function update_article($titre, $description, $descriptiondetail, $id)
 
     $reponse = $bdd->prepare('UPDATE article set titre = :titre , description = :description , descriptiondetail = :descriptiondetail where id_article=:id');
     $reponse->execute(array(
-    'titre'=>$titre,
-    'description'=>$description,
-    'descriptiondetail'=>$descriptiondetail,
+    'titre'=>htmlspecialchars($titre),
+    'description'=>htmlspecialchars($description),
+    'descriptiondetail'=>htmlspecialchars($descriptiondetail),
     'id'=>$id
   ));
 };
@@ -64,7 +64,7 @@ function add_image($nomfichier, $size, $extension, $alt)
   'nom'=>$nomfichier,
   'size'=>$size,
   'type'=>$extension,
-  'alt'=>$alt
+  'alt'=>htmlspecialchars($alt)
 ));
 };
 
@@ -77,9 +77,9 @@ function add_article($titre, $description, $descriptiondetail)
     $addarticle = $bdd->prepare('INSERT into article (img_id,titre,description,descriptiondetail) values(:id,:titre,:description,:descriptiondetail)');
     $addarticle->execute(array(
   'id'=>$lastid["max"],
-  'titre'=>$titre,
-  'description'=>$description,
-  'descriptiondetail'=>$descriptiondetail
+  'titre'=>htmlspecialchars($titre),
+  'description'=>htmlspecialchars($description),
+  'descriptiondetail'=>htmlspecialchars($descriptiondetail)
 ));
 };
 

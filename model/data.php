@@ -72,11 +72,8 @@ function add_article($titre, $description, $descriptiondetail)
 {
     global $bdd;
 
-    $imagelastid = $bdd->query('SELECT max(id_image) as max from image');
-    $lastid = $imagelastid->fetch();
-    $addarticle = $bdd->prepare('INSERT into article (img_id,titre,description,descriptiondetail) values(:id,:titre,:description,:descriptiondetail)');
+    $addarticle = $bdd->prepare('INSERT into article (img_id,titre,description,descriptiondetail) values(LAST_INSERT_ID(),:titre,:description,:descriptiondetail)');
     $addarticle->execute(array(
-  'id'=>$lastid["max"],
   'titre'=>htmlspecialchars($titre),
   'description'=>htmlspecialchars($description),
   'descriptiondetail'=>htmlspecialchars($descriptiondetail)
